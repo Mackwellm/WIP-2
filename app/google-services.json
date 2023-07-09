@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "355751370381",
+    "project_id": "work-in-progress-wip",
+    "storage_bucket": "work-in-progress-wip.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:355751370381:android:3df38ef5b390a9dff58cc4",
+        "android_client_info": {
+          "package_name": "com.example.wip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "355751370381-bhmgj97ar9rlkab3bul2srbkgu35ic2q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCt1PjcAV8iRPmN2z5Q74SpgWraucAZoQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "355751370381-bhmgj97ar9rlkab3bul2srbkgu35ic2q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

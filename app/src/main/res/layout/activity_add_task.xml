@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ADDiMAGE"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightBlue"
+    tools:context=".AddTask">
+
+    <TextView
+        android:id="@+id/tvHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="TASKS"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/llContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvHeading"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etTaskName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter task name" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description: "
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter description" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Date: "
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/etStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter start date" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="End Date: "
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/etEndDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter end date" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/HrsWorkedDaily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter hours worked on a daily" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:text="Min Daily Goal:"
+        android:textSize="25dp" />
+
+    <SeekBar
+        android:id="@+id/sbMin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMin"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:max="2"
+        android:min="0" />
+
+    <TextView
+        android:id="@+id/tvMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sbMin"
+        android:layout_centerHorizontal="true"
+        android:text="Max Daily Goal:"
+        android:textSize="25dp" />
+
+    <SeekBar
+        android:id="@+id/sbMax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMax"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:max="5"
+        android:min="3" />
+
+
+    <Button
+        android:id="@+id/btn_ADD"
+        android:layout_width="164dp"
+        android:layout_height="91dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="231dp"
+        android:layout_marginBottom="18dp"
+        android:text="Add Task"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="164dp"
+        android:layout_height="91dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="231dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="18dp"
+        android:text="Show Update"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/addImage"
+        android:layout_width="147dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sbMax"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="176dp"
+        android:text="ADD IMAGE" />
+
+</RelativeLayout>

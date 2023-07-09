@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightBlue"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="!!!WELCOME!!!"
+        android:textColor="#FF5722"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <Button
+        android:id="@+id/BTN_MAIN_LOGIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="384dp"
+        android:text="LOGIN"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtWelcome" />
+
+    <Button
+        android:id="@+id/btn_mainRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Register"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="407dp"
+        android:layout_height="100dp"
+        android:text=" OR IF YOUR DONT HAVE AN ACCOUNT...BELOW"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/btn_mainRegister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BTN_MAIN_LOGIN"
+        app:layout_constraintVertical_bias="0.56" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="403dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="62dp"
+        android:text="To your self time management app that will help you move through managing your time and setting your self up to your goals..."
+        android:textAlignment="viewStart"
+        android:textColor="#FF5722"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtWelcome" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="363dp"
+        android:layout_height="251dp"
+        app:layout_constraintBottom_toTopOf="@+id/BTN_MAIN_LOGIN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/opsc__m_wip" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
