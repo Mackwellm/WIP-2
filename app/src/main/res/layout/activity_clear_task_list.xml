@@ -4,6 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Pink"
     tools:context=".ClearTaskList">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Rcv"
+            android:layout_width="match_parent"
+            android:layout_height="596dp">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/addTask"
+            android:text="@string/add_task"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_marginHorizontal="20dp"
+            app:srcCompat="@drawable/baseline_add_24" />
+
+        <Button
+            android:id="@+id/updatedList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Updated List" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

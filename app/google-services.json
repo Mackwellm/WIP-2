@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "355751370381",
-    "project_id": "work-in-progress-wip",
-    "storage_bucket": "work-in-progress-wip.appspot.com"
+    "project_number": "273316387124",
+    "firebase_url": "https://work-in-progress-wip-eb8a3-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "work-in-progress-wip-eb8a3",
+    "storage_bucket": "work-in-progress-wip-eb8a3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:355751370381:android:3df38ef5b390a9dff58cc4",
+        "mobilesdk_app_id": "1:273316387124:android:7cbcce5b1772bc4e45ed61",
         "android_client_info": {
           "package_name": "com.example.wip"
         }
       },
       "oauth_client": [
         {
-          "client_id": "355751370381-bhmgj97ar9rlkab3bul2srbkgu35ic2q.apps.googleusercontent.com",
+          "client_id": "273316387124-619n5rlqh3dlbti6uhp5bf95g3d0uc4c.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCt1PjcAV8iRPmN2z5Q74SpgWraucAZoQw"
+          "current_key": "AIzaSyBR3UoMt0D-9pFI9L5_qWHJ76-4ye_P34w"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "355751370381-bhmgj97ar9rlkab3bul2srbkgu35ic2q.apps.googleusercontent.com",
+              "client_id": "273316387124-619n5rlqh3dlbti6uhp5bf95g3d0uc4c.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

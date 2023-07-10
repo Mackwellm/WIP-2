@@ -31,13 +31,6 @@
                     android:layout_height="wrap_content"
                     android:text="Log Out" />
 
-                <TextView
-                    android:id="@+id/UserDets"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="TextView"
-                    />
-
                 <ImageView
                     android:id="@+id/imageView3"
                     android:layout_width="match_parent"
@@ -64,7 +57,7 @@
                     android:textSize="24sp" />
 
                 <TextView
-                    android:id="@+id/txtNewCat1"
+                    android:id="@+id/txt.NewAct"
                     android:layout_width="match_parent"
                     android:layout_height="37dp"
                     android:background="#2196F3"

@@ -23,7 +23,7 @@ class MyAdapter(listOfTasks: ListOfTasks, list: ArrayList<TaskModel?>) : Recycle
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val model: TaskModel = mList!![position]
+        val model: TaskModel = mList!!.get(position)
         holder.taskName.setText(model.taskName)
         holder.description.setText(model.description)
         holder.start.setText(model.startDate)

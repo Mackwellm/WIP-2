@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.wip.databinding.ActivityAddTaskBinding
+import com.github.mikephil.charting.components.Description
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
@@ -15,9 +16,8 @@ class AddTask : AppCompatActivity() {
 
     private lateinit var binding: ActivityAddTaskBinding
     private lateinit var db: FirebaseDatabase
-    private lateinit var database: DatabaseReference
-    private lateinit var MinGoal: SeekBar
-    private lateinit var MaxGoal: SeekBar
+    private lateinit var root: DatabaseReference
+
     private lateinit var addImage: Button
     private lateinit var addTask: Button
     private lateinit var showData: Button
@@ -45,7 +45,7 @@ class AddTask : AppCompatActivity() {
         setContentView(binding.root)
 
         db = FirebaseDatabase.getInstance()
-        database = db.getReference().child("Tasks")
+        root = db.getReference().child("Tasks")
 
         addTask = findViewById(R.id.btn_ADD)
 
@@ -56,36 +56,73 @@ class AddTask : AppCompatActivity() {
             val start = binding.etStartDate.text.toString()
             val end = binding.etEndDate.text.toString()
             val Hrs = binding.HrsWorkedDaily.text.toString()
-            val Mini = binding.tvMin.text.toString()
-            val Maxi = binding.tvMax.text.toString()
+            //Min seekbar
+            val Mini = binding.sbMin.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+                //when progress of the seekbar is changed
+                override fun onProgressChanged(seek: SeekBar, progress: Int, FromUser: Boolean) {
 
-            val TaskMap = hashMapOf<String, String>()
+                }
+
+                override fun onStartTrackingTouch(seek: SeekBar) {
+
+                }
+
+                override fun onStopTrackingTouch(seek: SeekBar) {
+
+                    val minTxt = findViewById<TextView>(R.id.tvMin)
+                    minTxt.setText("Min Daily Goal: " + seek.progress)
+                }
+            })
+
+            //Max seekbar
+            val Maxi = binding.sbMax.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+                //when progress of the seekbar is changed
+                override fun onProgressChanged(
+                    Barseek: SeekBar,
+                    progress: Int,
+                    FromUser: Boolean
+                ) {
+
+                }
+
+                override fun onStartTrackingTouch(Barseek: SeekBar) {
+
+                }
+
+                override fun onStopTrackingTouch(Barseek: SeekBar) {
+
+                    val maxTxt = findViewById<TextView>(R.id.tvMax)
+                    maxTxt.setText("Max Daily Goal: " + Barseek.progress)
+                }
+            })
+
+            val TaskMap = HashMap<String, String>()
+
             TaskMap.put("Task Name", name)
             TaskMap.put("Description", description)
             TaskMap.put("Start Date", start)
             TaskMap.put("End Date", end)
             TaskMap.put("Hoursworked daily so far", Hrs)
-            TaskMap.put("Minimum Daily Hours", Mini)
-            TaskMap.put("Maximum Daily Hours", Maxi)
+            TaskMap.put("Minimum Daily Hours", Mini.toString())
+            TaskMap.put("Maximum Daily Hours", Maxi.toString())
 
-            database.push().setValue(TaskMap).addOnCompleteListener {
+            root.push().setValue(TaskMap).addOnCompleteListener {
                 Toast.makeText(this, "Data Saved", Toast.LENGTH_SHORT).show()
             }
-        }
 
-        showData = findViewById(R.id.btn_update)
 
-        showData.setOnClickListener {
-            val intent = Intent(this, ListOfTasks::class.java)
-//            intent.putExtra("Task Name", name)
-//            intent.putExtra("Description", description)
-//            intent.putExtra("Start Date", start)
-//            intent.putExtra("End Date", end)
-//            intent.putExtra("Hoursworked daily so far", Hrs)
-//            intent.putExtra("Minimum Daily Hours", Mini)
-//            intent.putExtra("Maximum Daily Hours", Maxi)
+            val intent = Intent(this, UpdatedList::class.java)
+            intent.putExtra("Name", name)
+            intent.putExtra("Description", description)
+            intent.putExtra("Start Date", start)
+            intent.putExtra("End Date", end)
+            intent.putExtra("Hours Worked", Hrs)
+            intent.putExtra("Min Goal", Mini.toString())
+            intent.putExtra("Max Goal", Maxi.toString())
             startActivity(intent)
         }
+
+
 
         addImage = findViewById(R.id.addImage)
 
@@ -94,45 +131,11 @@ class AddTask : AppCompatActivity() {
             startActivity(intent)
         }
 
-        //Min seekbar
-        MinGoal?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-            //when progress of the seekbar is changed
-            override fun onProgressChanged(seek: SeekBar, progress: Int, FromUser: Boolean) {
 
-            }
 
-            override fun onStartTrackingTouch(seek: SeekBar) {
 
-            }
 
-            override fun onStopTrackingTouch(seek: SeekBar) {
 
-                val minTxt = findViewById<TextView>(R.id.tvMin)
-                minTxt.setText("Min Daily Goal: " + seek.progress)
-            }
-        })
-
-        //Max seekbar
-        MaxGoal?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-            //when progress of the seekbar is changed
-            override fun onProgressChanged(
-                Barseek: SeekBar,
-                progress: Int,
-                FromUser: Boolean
-            ) {
-
-            }
-
-            override fun onStartTrackingTouch(Barseek: SeekBar) {
-
-            }
-
-            override fun onStopTrackingTouch(Barseek: SeekBar) {
-
-                val maxTxt = findViewById<TextView>(R.id.tvMax)
-                maxTxt.setText("Max Daily Goal: " + Barseek.progress)
-            }
-        })
 
 
 
